@@ -50,8 +50,6 @@ def row_to_task(row):
 def create_task(title, status):
     connection = get_db_connection()
     try:
-        title = title.strip()
-
         cursor = connection.cursor()
         cursor.execute(
             "insert into tasks (title, status) values(?,?)",
@@ -62,33 +60,6 @@ def create_task(title, status):
             "id": cursor.lastrowid,
             "title":title,
             "status":status
-        }
-
-    finally:
-        connection.close()
-
-def delete_task_by_id(task_id):
-    connection = get_db_connection()
-    try:
-        cursor = connection.cursor()
-        cursor.execute(
-            "SELECT * FROM tasks where id=?",
-            (task_id,)
-        )
-        task = cursor.fetchone()
-        if task is None:
-            return None
-
-        cursor.execute(
-            "delete from tasks where id=?",
-            (task_id,)
-        )
-        connection.commit()
-        
-        return {
-            "id": task[0],
-            "title": task[1],
-            "status": task[2]
         }
 
     finally:
@@ -137,7 +108,6 @@ def patch_task_by_id(task_id, title, status):
         if status is None:
             status = task[2]
 
-        title = title.strip()
         cursor.execute(
             "update tasks set title=?, status=? where id=?",
             (title, status, task_id)
@@ -149,5 +119,32 @@ def patch_task_by_id(task_id, title, status):
             "title":title,
             "status":status
         }
+    finally:
+        connection.close()
+
+def delete_task_by_id(task_id):
+    connection = get_db_connection()
+    try:
+        cursor = connection.cursor()
+        cursor.execute(
+            "SELECT * FROM tasks where id=?",
+            (task_id,)
+        )
+        task = cursor.fetchone()
+        if task is None:
+            return None
+
+        cursor.execute(
+            "delete from tasks where id=?",
+            (task_id,)
+        )
+        connection.commit()
+        
+        return {
+            "id": task[0],
+            "title": task[1],
+            "status": task[2]
+        }
+
     finally:
         connection.close()

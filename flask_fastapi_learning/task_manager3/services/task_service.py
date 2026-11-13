@@ -1,0 +1,5 @@
+from repositories.task_repository import create_task
+
+def create_task_service(title, status):
+    task = create_task(title, status)
+    return task
