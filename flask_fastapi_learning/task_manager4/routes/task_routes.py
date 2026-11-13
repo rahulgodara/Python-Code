@@ -1,5 +1,5 @@
 from flask import Blueprint, request, abort
-from repositories.task_repository import get_task_by_id, get_all_tasks, delete_task_by_id, update_task_by_id, patch_task_by_id
+from repositories.task_repository import get_task_by_id, get_all_tasks, delete_task_by_id, update_task_by_id
 from services.task_service import create_task_service, patch_task_service
 
 task_bp = Blueprint("tasks", __name__)
@@ -115,13 +115,14 @@ def patch_task(task_id):
 
     try:
         task = patch_task_service(task_id, title, status)
-        if task is None:
-            abort(404)
     except ValueError as e:
         return {
             "message": str(e)
         }, 400
 
+    if task is None:
+        abort(404)
+    
     return {
         "message": "Task updated successfully",
         "task": task

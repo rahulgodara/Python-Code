@@ -10,9 +10,12 @@ def patch_task_service(task_id, title, status):
         return None
 
     existing_status = task["status"]
-    if existing_status=='completed' and status !="completed":
+
+    requested_status = status if status is not None else existing_status
+
+    if existing_status=='completed' and requested_status !="completed":
         raise ValueError("Status cannot move back from completed")
-    if existing_status=='in_progress' and status not in {"in_progress", "completed"}:
+    if existing_status=='in_progress' and requested_status not in {"in_progress", "completed"}:
         raise ValueError("Status cannot move back to pending")
 
     return patch_task_by_id(task_id, title, status)
