@@ -1,4 +1,4 @@
-from repositories.task_repository import create_task, get_task_by_id, patch_task_by_id
+from repositories.task_repository import create_task, get_task_by_id, patch_task_by_id, delete_task_by_id
 
 def create_task_service(title):
     status = "pending"
@@ -19,4 +19,6 @@ def patch_task_service(task_id, title, status):
         raise ValueError("Status cannot move back to pending")
 
     return patch_task_by_id(task_id, title, status)
-    
+
+def delete_task_service(task_id):
+    return delete_task_by_id(task_id)

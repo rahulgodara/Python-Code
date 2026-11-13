@@ -1,6 +1,6 @@
 from flask import Blueprint, request, abort
-from repositories.task_repository import get_task_by_id, get_all_tasks, delete_task_by_id, update_task_by_id
-from services.task_service import create_task_service, patch_task_service
+from repositories.task_repository import get_task_by_id, get_all_tasks, update_task_by_id
+from services.task_service import create_task_service, patch_task_service, delete_task_service
 
 task_bp = Blueprint("tasks", __name__)
 
@@ -130,7 +130,7 @@ def patch_task(task_id):
 
 @task_bp.route("/tasks/<int:task_id>", methods=["DELETE"])
 def delete_task(task_id):
-    deleted_task = delete_task_by_id(task_id)
+    deleted_task = delete_task_service(task_id)
     if deleted_task is None:
         abort(404)
 

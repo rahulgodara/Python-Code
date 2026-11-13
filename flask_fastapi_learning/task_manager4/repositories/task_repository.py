@@ -127,17 +127,13 @@ def delete_task_by_id(task_id):
     try:
         cursor = connection.cursor()
         cursor.execute(
-            "SELECT * FROM tasks where id=?",
+            "DELETE FROM tasks WHERE id=? RETURNING *",
             (task_id,)
         )
         task = cursor.fetchone()
         if task is None:
             return None
 
-        cursor.execute(
-            "delete from tasks where id=?",
-            (task_id,)
-        )
         connection.commit()
         
         return {
@@ -146,5 +142,33 @@ def delete_task_by_id(task_id):
             "status": task[2]
         }
 
+    finally:
+        connection.close()
+
+def update_task_with_history(task_id, new_status):
+    connection = get_db_connection()
+    try:
+        cursor = connection.cursor()
+
+        cursor.execute(
+            "UPDATE tasks SET status=? WHERE id=?",
+            (new_status, task_id)
+        )
+
+        # Check whether task exists
+        if cursor.rowcount == 0:
+            return None
+
+        cursor.execute(
+            "INSERT INTO task_history (task_id, status) VALUES (?, ?)",
+            (task_id, new_status)
+        )
+        
+        connection.commit()
+
+        return True
+    except Exception:
+        connection.rollback()
+        raise
     finally:
         connection.close()
