@@ -1,0 +1,19 @@
+from repositories.task_repository import create_task, get_task_by_id, patch_task_by_id
+
+def create_task_service(title):
+    status = "pending"
+    return create_task(title, status)
+
+def patch_task_service(task_id, title, status):
+    task = get_task_by_id(task_id)
+    if task is None:
+        return None
+
+    existing_status = task["status"]
+    if existing_status=='completed' and status !="completed":
+        raise ValueError("Status cannot move back from completed")
+    if existing_status=='in_progress' and status not in {"in_progress", "completed"}:
+        raise ValueError("Status cannot move back to pending")
+
+    return patch_task_by_id(task_id, title, status)
+    

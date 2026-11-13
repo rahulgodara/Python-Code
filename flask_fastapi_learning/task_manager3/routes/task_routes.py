@@ -44,7 +44,7 @@ def create_task():
     if not isinstance(status, str) or status not in allowed_status:
         return {"error": "Status is not valid"}, 400
 
-    new_task = create_task_service(title, status)
+    new_task = create_task_service(title)
 
     return {
         "message": "Task created successfully",
