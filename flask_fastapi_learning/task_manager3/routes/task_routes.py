@@ -1,5 +1,6 @@
 from flask import Blueprint, request, abort
-from repositories.task_repository import get_task_by_id, get_all_tasks, create_task as create_new_task, delete_task_by_id, update_task_by_id, patch_task_by_id
+from repositories.task_repository import get_task_by_id, get_all_tasks, delete_task_by_id, update_task_by_id, patch_task_by_id
+from services.task_service import create_task_service
 
 task_bp = Blueprint("tasks", __name__)
 
@@ -22,16 +23,16 @@ def get_task(task_id):
 @task_bp.route("/tasks", methods=["POST"])
 def create_task():
     data = request.get_json(silent=True)
-    allowed_fields = {"title", "status"}
-    
-    if not set(data.keys()).issubset(allowed_fields):
-        return {"error": "Unsupported fields"}, 400
     
     if data is None:
         return {"error":"Invalid JSON"},400
     
     if not isinstance(data, dict):
         return {"error": "Invalid JSON"}, 400
+
+    allowed_fields = {"title", "status"}
+    if not set(data.keys()).issubset(allowed_fields):
+        return {"error": "Unsupported fields"}, 400
     
     title = data.get("title")
     if not isinstance(title, str) or not title.strip():
@@ -43,7 +44,7 @@ def create_task():
     if not isinstance(status, str) or status not in allowed_status:
         return {"error": "Status is not valid"}, 400
 
-    new_task = create_new_task(title, status)
+    new_task = create_task_service(title, status)
 
     return {
         "message": "Task created successfully",
@@ -53,16 +54,16 @@ def create_task():
 @task_bp.route("/tasks/<int:task_id>", methods=["PUT"])
 def update_task(task_id):
     data = request.get_json(silent=True)
-    allowed_fields = {"title", "status"}
-    
-    if not set(data.keys()).issubset(allowed_fields):
-        return {"error": "Unsupported fields"}, 400
     
     if data is None:
         return {"error":"Invalid JSON"},400
     
     if not isinstance(data, dict):
         return {"error": "Invalid JSON"}, 400
+
+    allowed_fields = {"title", "status"}
+    if not set(data.keys()).issubset(allowed_fields):
+        return {"error": "Unsupported fields"}, 400
     
     title = data.get("title")
     if not isinstance(title, str) or not title.strip():
@@ -86,11 +87,7 @@ def update_task(task_id):
 @task_bp.route("/tasks/<int:task_id>", methods=["PATCH"])
 def patch_task(task_id):
     data = request.get_json(silent=True)
-    allowed_fields = {"title", "status"}
-
-    if not set(data.keys()).issubset(allowed_fields):
-        return {"error": "Unsupported fields"}, 400
-
+    
     if data is None:
         return {"error":"Invalid Json"},400
 
@@ -99,6 +96,10 @@ def patch_task(task_id):
 
     if not data:
         return {"error": "At least one field is required"}, 400
+
+    allowed_fields = {"title", "status"}
+    if not set(data.keys()).issubset(allowed_fields):
+        return {"error": "Unsupported fields"}, 400
     
     title = data.get("title")
     if "title" in data:
