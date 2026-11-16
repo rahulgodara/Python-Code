@@ -1,4 +1,4 @@
-from database import get_db_connection
+from ..database import get_db_connection
 
 def get_task_by_id(task_id):
     connection = get_db_connection()
@@ -151,17 +151,25 @@ def update_task_with_history(task_id, new_status):
         cursor = connection.cursor()
 
         cursor.execute(
+            "select status from tasks where id=?",
+            (task_id,)
+        )
+        task = cursor.fetchone()
+
+        # Check whether task exists
+        if task is None:
+            return None
+
+        old_status = task[0]
+
+        cursor.execute(
             "UPDATE tasks SET status=? WHERE id=?",
             (new_status, task_id)
         )
 
-        # Check whether task exists
-        if cursor.rowcount == 0:
-            return None
-
         cursor.execute(
-            "INSERT INTO task_history (task_id, status) VALUES (?, ?)",
-            (task_id, new_status)
+            "INSERT INTO task_history (task_id, old_status, new_status) VALUES (?, ?, ?)",
+            (task_id, old_status, new_status)
         )
         
         connection.commit()
