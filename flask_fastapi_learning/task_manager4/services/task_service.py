@@ -22,3 +22,6 @@ def patch_task_service(task_id, title, status):
 
 def delete_task_service(task_id):
     return delete_task_by_id(task_id)
+
+def get_task_history_service(task_id):
+    return get_task_history_repo(task_id)

@@ -138,3 +138,14 @@ def delete_task(task_id):
         "message": "Task deleted successfully",
         "task": deleted_task
     }, 200
+
+
+@task_bp.route("/tasks/<int:task_id>/history", methods=["GET"])
+def get_task_history(task_id):
+    result = get_task_history_service(task_id)
+    if result is None:
+        abort(404)
+
+    return {
+        "task": result
+    }, 200

@@ -181,7 +181,7 @@ def update_task_with_history(task_id, new_status):
     finally:
         connection.close()
 
-def get_task_history(task_id):
+def get_task_history_repo(task_id):
     connection = get_db_connection()
     try:
         cursor = connection.cursor()
@@ -192,18 +192,25 @@ def get_task_history(task_id):
         )
         rows = cursor.fetchall()
 
-        if rows is None:
+        if not rows:
             return None
         
         history = []
         for row in rows:
-            history.append({
-                "history_id": row[3],
-                "old_status": row[4],
-                "new_status": row[5]
-            })
-
+            if row[3] is not None:
+                history.append({
+                    "history_id": row[3],
+                    "old_status": row[4],
+                    "new_status": row[5]
+                })
         
-
+        row = rows[0]
+        
+        return{
+            "id": row[0],
+            "title": row[1],
+            "status": row[2],
+            "history": history
+        }
     finally:
         connection.close()
