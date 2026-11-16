@@ -6,4 +6,5 @@ DB_PATH = BASE_DIR.parent / "tasks.db"
 
 def get_db_connection():
     connection = sqlite3.connect(DB_PATH)
+    connection.execute("PRAGMA foreign_keys = ON")
     return connection

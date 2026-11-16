@@ -180,3 +180,30 @@ def update_task_with_history(task_id, new_status):
         raise
     finally:
         connection.close()
+
+def get_task_history(task_id):
+    connection = get_db_connection()
+    try:
+        cursor = connection.cursor()
+        cursor.execute(
+            "SELECT t.id, t.title, t.status, h.id AS history_id, h.old_status, h.new_status " \
+            "FROM tasks t LEFT JOIN task_history h ON t.id = h.task_id WHERE t.id = ? ORDER BY h.id ",
+            (task_id,)
+        )
+        rows = cursor.fetchall()
+
+        if rows is None:
+            return None
+        
+        history = []
+        for row in rows:
+            history.append({
+                "history_id": row[3],
+                "old_status": row[4],
+                "new_status": row[5]
+            })
+
+        
+
+    finally:
+        connection.close()
