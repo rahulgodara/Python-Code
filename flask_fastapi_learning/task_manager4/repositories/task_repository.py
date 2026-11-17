@@ -1,4 +1,4 @@
-from ..database import get_db_connection
+from tm_database import get_db_connection
 
 def get_task_by_id(task_id):
     connection = get_db_connection()
@@ -214,3 +214,8 @@ def get_task_history_repo(task_id):
         }
     finally:
         connection.close()
+
+
+result = update_task_with_history(1, "completed")
+print(result)
+
