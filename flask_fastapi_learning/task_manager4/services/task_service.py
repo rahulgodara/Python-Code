@@ -1,4 +1,4 @@
-from repositories.task_repository import create_task, get_task_by_id, patch_task_by_id, delete_task_by_id
+from repositories.task_repository import create_task, get_task_by_id, patch_task_by_id, delete_task_by_id, get_task_history_repo
 
 def create_task_service(title):
     status = "pending"
