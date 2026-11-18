@@ -102,16 +102,24 @@ def patch_task_by_id(task_id, title, status):
         if task is None:
             return None
 
+        old_status = task[2]
+
         if title is None:
             title = task[1]
 
         if status is None:
-            status = task[2]
+            status = old_status
 
         cursor.execute(
             "update tasks set title=?, status=? where id=?",
             (title, status, task_id)
         )
+
+        if old_status != status:
+            cursor.execute(
+                "INSERT INTO task_history (task_id, old_status, new_status) VALUES (?, ?, ?)",
+                (task_id, old_status, status)
+            )
 
         connection.commit()
         return {
@@ -119,6 +127,10 @@ def patch_task_by_id(task_id, title, status):
             "title":title,
             "status":status
         }
+    
+    except Exception:
+        connection.rollback()
+        raise
     finally:
         connection.close()
 
@@ -161,6 +173,9 @@ def update_task_with_history(task_id, new_status):
             return None
 
         old_status = task[0]
+
+        if old_status == new_status:
+            return True
 
         cursor.execute(
             "UPDATE tasks SET status=? WHERE id=?",
@@ -214,8 +229,3 @@ def get_task_history_repo(task_id):
         }
     finally:
         connection.close()
-
-
-result = update_task_with_history(1, "completed")
-print(result)
-

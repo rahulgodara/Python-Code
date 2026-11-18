@@ -1,10 +1,10 @@
-from repositories.task_repository import create_task, get_task_by_id, patch_task_by_id, delete_task_by_id, get_task_history_repo
+from repositories.task_repository import create_task, get_task_by_id, patch_task_by_id, delete_task_by_id, get_task_history_repo, update_task_with_history
 
 def create_task_service(title):
     status = "pending"
     return create_task(title, status)
 
-def patch_task_service(task_id, title, status):
+def update_task_service(task_id, title, status):
     task = get_task_by_id(task_id)
     if task is None:
         return None

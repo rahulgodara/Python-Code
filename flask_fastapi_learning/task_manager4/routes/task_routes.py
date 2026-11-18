@@ -1,6 +1,6 @@
 from flask import Blueprint, request, abort
-from repositories.task_repository import get_task_by_id, get_all_tasks, update_task_by_id
-from services.task_service import create_task_service, patch_task_service, delete_task_service
+from repositories.task_repository import get_task_by_id, get_all_tasks
+from services.task_service import create_task_service, update_task_service, delete_task_service, get_task_history_service
 
 task_bp = Blueprint("tasks", __name__)
 
@@ -70,7 +70,13 @@ def update_task(task_id):
     if not isinstance(status, str) or status not in allowed_status:
         return {"error": "Status is not valid"}, 400
     
-    task = update_task_by_id(task_id, title, status)
+    try:
+        task = update_task_service(task_id, title, status)
+    except ValueError as e:
+        return {
+            "message": str(e)
+        }, 400
+
     if task is None:
         abort(404)
             
@@ -114,7 +120,7 @@ def patch_task(task_id):
         status = None
 
     try:
-        task = patch_task_service(task_id, title, status)
+        task = update_task_service(task_id, title, status)
     except ValueError as e:
         return {
             "message": str(e)
