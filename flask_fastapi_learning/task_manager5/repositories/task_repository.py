@@ -1,4 +1,5 @@
 from tm_database import get_db_connection
+from exceptions import TaskNotFoundError
 
 def get_task_by_id(task_id):
     connection = get_db_connection()
@@ -13,7 +14,7 @@ def get_task_by_id(task_id):
         row = cursor.fetchone()
 
         if row is None:
-            return None
+            raise TaskNotFoundError("Task not found")
 
         return row_to_task(row)
 

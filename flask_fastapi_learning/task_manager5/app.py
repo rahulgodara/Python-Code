@@ -2,9 +2,40 @@ from flask import Flask
 from routes.task_routes import task_bp
 from config import DevelopmentConfig, ProductionConfig
 import os
+from exceptions import (
+    TaskNotFoundError,
+    InvalidTaskDataError,
+    BusinessRuleError
+)
+
 
 def create_app():
     app = Flask(__name__)
+    @app.errorhandler(TaskNotFoundError)
+    def handle_task_not_found(error):
+        return {
+            "error": str(error)
+        }, 404
+    
+    @app.errorhandler(InvalidTaskDataError)
+    def handle_invalid_task_data(error):
+        return {
+            "error": str(error)
+        }, 400
+    
+    @app.errorhandler(BusinessRuleError)
+    def handle_business_rule_error(error):
+        return {
+            "error": str(error)
+        }, 400
+
+    @app.errorhandler(Exception)
+    def handle_unexpected_error(error):
+        logging.exception("Unexpected application error")
+        return {
+            "error": "Internal server error"
+        }, 500
+
     environment = os.getenv("APP_ENV", "development")
 
     if environment=="production":
