@@ -1,9 +1,16 @@
 from repositories.task_repository import create_task, get_task_by_id, patch_task_by_id, delete_task_by_id, get_task_history_repo, update_task_with_history
 from exceptions import BusinessRuleError
+import logging
+
+logger = logging.getLogger(__name__)
 
 def create_task_service(title):
     status = "pending"
-    return create_task(title, status)
+    logger.info("Task creation requested")
+    task = create_task(title, status)
+    if task:
+       logger.info("Task creation successful")
+    return task
 
 def update_task_service(task_id, title, status):
     task = get_task_by_id(task_id)

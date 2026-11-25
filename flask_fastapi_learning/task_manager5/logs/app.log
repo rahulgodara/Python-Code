@@ -1,0 +1,95 @@
+2026-11-23 18:12:59,011 - INFO - app - Task Manager API started successfully
+2026-11-23 18:12:59,015 - INFO - app - Task Manager API started successfully
+2026-11-23 18:12:59,015 - INFO - app - Task Manager API started successfully
+2026-11-23 18:12:59,402 - INFO - app - Task Manager API started successfully
+2026-11-23 18:12:59,406 - INFO - app - Task Manager API started successfully
+2026-11-23 18:12:59,406 - INFO - app - Task Manager API started successfully
+2026-11-23 18:13:23,998 - INFO - app - Task Manager API started successfully
+2026-11-23 18:13:24,002 - INFO - app - Task Manager API started successfully
+2026-11-23 18:13:24,002 - INFO - app - Task Manager API started successfully
+2026-11-23 18:27:08,557 - INFO - app - Task Manager API started successfully
+2026-11-23 18:27:08,561 - INFO - app - Task Manager API started successfully
+2026-11-23 18:27:08,593 - INFO - werkzeug - WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:8000
+2026-11-23 18:27:08,593 - INFO - werkzeug - Press CTRL+C to quit
+2026-11-23 18:27:08,596 - INFO - werkzeug -  * Restarting with stat
+2026-11-23 18:27:08,946 - INFO - app - Task Manager API started successfully
+2026-11-23 18:27:08,950 - INFO - app - Task Manager API started successfully
+2026-11-23 18:27:08,970 - WARNING - werkzeug -  * Debugger is active!
+2026-11-23 18:27:08,972 - INFO - werkzeug -  * Debugger PIN: 855-507-881
+2026-11-23 18:27:20,376 - INFO - services.task_service - Task creation requested
+2026-11-23 18:27:20,386 - INFO - services.task_service - Task creation successful
+2026-11-23 18:27:20,387 - INFO - werkzeug - 127.0.0.1 - - [23/Nov/2026 18:27:20] "POST /tasks HTTP/1.1" 201 -
+2026-11-23 18:27:28,565 - INFO - services.task_service - Task creation requested
+2026-11-23 18:27:28,576 - INFO - services.task_service - Task creation successful
+2026-11-23 18:27:28,576 - INFO - werkzeug - 127.0.0.1 - - [23/Nov/2026 18:27:28] "POST /tasks HTTP/1.1" 201 -
+2026-11-23 18:28:01,386 - INFO - werkzeug -  * Detected change in 'F:\\Python\\Code\\flask_fastapi_learning\\task_manager5\\repositories\\task_repository.py', reloading
+2026-11-23 18:28:01,415 - INFO - werkzeug -  * Restarting with stat
+2026-11-23 18:28:01,784 - INFO - app - Task Manager API started successfully
+2026-11-23 18:28:01,788 - INFO - app - Task Manager API started successfully
+2026-11-23 18:28:01,809 - WARNING - werkzeug -  * Debugger is active!
+2026-11-23 18:28:01,811 - INFO - werkzeug -  * Debugger PIN: 855-507-881
+2026-11-23 18:28:04,016 - INFO - services.task_service - Task creation requested
+2026-11-23 18:28:04,018 - ERROR - repositories.task_repository - Error while creating task
+Traceback (most recent call last):
+  File "F:\Python\Code\flask_fastapi_learning\task_manager5\repositories\task_repository.py", line 64, in create_task
+    cursor.execute(
+    ~~~~~~~~~~~~~~^
+        """
+        ^^^
+    ...<4 lines>...
+        (task_id, "None", status)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+sqlite3.OperationalError: no such table: task_historyy
+2026-11-23 18:28:04,020 - INFO - werkzeug - 127.0.0.1 - - [23/Nov/2026 18:28:04] "POST /tasks HTTP/1.1" 500 -
+2026-11-23 18:28:08,892 - INFO - werkzeug -  * Detected change in 'F:\\Python\\Code\\flask_fastapi_learning\\task_manager5\\repositories\\task_repository.py', reloading
+2026-11-23 18:28:08,923 - INFO - werkzeug -  * Restarting with stat
+2026-11-23 18:28:09,286 - INFO - app - Task Manager API started successfully
+2026-11-23 18:28:09,290 - INFO - app - Task Manager API started successfully
+2026-11-23 18:28:09,311 - WARNING - werkzeug -  * Debugger is active!
+2026-11-23 18:28:09,313 - INFO - werkzeug -  * Debugger PIN: 855-507-881
+2026-11-23 18:32:36,092 - INFO - werkzeug -  * Detected change in 'F:\\Python\\Code\\flask_fastapi_learning\\task_manager5\\app.py', reloading
+2026-11-23 18:32:36,123 - INFO - werkzeug -  * Restarting with stat
+2026-11-23 18:32:41,194 - INFO - werkzeug -  * Restarting with stat
+2026-11-23 18:33:43,306 - INFO - app - Task Manager API started successfully
+2026-11-23 18:33:43,309 - INFO - app - Task Manager API started successfully
+2026-11-23 18:33:43,341 - INFO - werkzeug - WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:8000
+2026-11-23 18:33:43,342 - INFO - werkzeug - Press CTRL+C to quit
+2026-11-23 18:33:43,344 - INFO - werkzeug -  * Restarting with stat
+2026-11-23 18:33:43,690 - INFO - app - Task Manager API started successfully
+2026-11-23 18:33:43,693 - INFO - app - Task Manager API started successfully
+2026-11-23 18:33:43,714 - WARNING - werkzeug -  * Debugger is active!
+2026-11-23 18:33:43,716 - INFO - werkzeug -  * Debugger PIN: 855-507-881
+2026-11-23 18:33:47,352 - INFO - services.task_service - Task creation requested
+2026-11-23 18:33:47,367 - INFO - services.task_service - Task creation successful
+2026-11-23 18:33:47,367 - INFO - werkzeug - 127.0.0.1 - - [23/Nov/2026 18:33:47] "POST /tasks HTTP/1.1" 201 -
+2026-11-23 18:33:49,704 - INFO - services.task_service - Task creation requested
+2026-11-23 18:33:49,715 - INFO - services.task_service - Task creation successful
+2026-11-23 18:33:49,715 - INFO - werkzeug - 127.0.0.1 - - [23/Nov/2026 18:33:49] "POST /tasks HTTP/1.1" 201 -
+2026-11-23 18:33:50,376 - INFO - services.task_service - Task creation requested
+2026-11-23 18:33:50,387 - INFO - services.task_service - Task creation successful
+2026-11-23 18:33:50,387 - INFO - werkzeug - 127.0.0.1 - - [23/Nov/2026 18:33:50] "POST /tasks HTTP/1.1" 201 -
+2026-11-23 18:33:58,844 - INFO - werkzeug -  * Detected change in 'F:\\Python\\Code\\flask_fastapi_learning\\task_manager5\\repositories\\task_repository.py', reloading
+2026-11-23 18:33:58,875 - INFO - werkzeug -  * Restarting with stat
+2026-11-23 18:33:59,249 - INFO - app - Task Manager API started successfully
+2026-11-23 18:33:59,253 - INFO - app - Task Manager API started successfully
+2026-11-23 18:33:59,273 - WARNING - werkzeug -  * Debugger is active!
+2026-11-23 18:33:59,275 - INFO - werkzeug -  * Debugger PIN: 855-507-881
+2026-11-23 18:34:00,629 - INFO - services.task_service - Task creation requested
+2026-11-23 18:34:00,631 - ERROR - repositories.task_repository - Error while creating task
+Traceback (most recent call last):
+  File "F:\Python\Code\flask_fastapi_learning\task_manager5\repositories\task_repository.py", line 64, in create_task
+    cursor.execute(
+    ~~~~~~~~~~~~~~^
+        """
+        ^^^
+    ...<4 lines>...
+        (task_id, "None", status)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+sqlite3.OperationalError: no such table: task_historyy
+2026-11-23 18:34:00,633 - INFO - werkzeug - 127.0.0.1 - - [23/Nov/2026 18:34:00] "POST /tasks HTTP/1.1" 500 -

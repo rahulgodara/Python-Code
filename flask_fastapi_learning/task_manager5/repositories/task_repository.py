@@ -1,5 +1,8 @@
 from tm_database import get_db_connection
 from exceptions import TaskNotFoundError
+import logging
+
+logger = logging.getLogger(__name__)
 
 def get_task_by_id(task_id):
     connection = get_db_connection()
@@ -68,15 +71,15 @@ def create_task(title, status):
         )
 
         connection.commit()
-
         return {
             "id": task_id,
             "title":title,
             "status":status
         }
-    except Exception as e:
+    except Exception:
+        logger.exception("Error while creating task")
         connection.rollback()
-        raise ValueError
+        raise
     finally:
         connection.close()
 

@@ -42,7 +42,7 @@ def create_task():
     
     try:
         new_task = create_task_service(title)
-    except sqlite3.Error as e:
+    except sqlite3.Error:
         return {
             "error": "Unable to create task due to a database error"
         }, 500
