@@ -73,7 +73,7 @@ def create_app():
         }, 500
 
     environment = os.getenv("APP_ENV", "development").lower().strip()
-    print("####################---------",environment)
+    # print("####################---------",environment)
     
     if environment=="production":
         if not ProductionConfig.SECRET_KEY:
@@ -98,17 +98,10 @@ def create_app():
     return app
 
 app1 = create_app()
-app2 = create_app()
 
 app1.config["APP_NAME"] = "Application One"
-app2.config["APP_NAME"] = "Application Two"
-
 
 
 if __name__=="__main__":
-    # print("Application name:",app1.config["APP_NAME"])
-    # print("Debug mode:",app1.config["DEBUG"])
     print("App1 ---------",app1.config["APP_NAME"])
-    print("App2 ---------",app2.config["APP_NAME"])
     app1.run(port=8000)
-    # app2.run(port=9000)

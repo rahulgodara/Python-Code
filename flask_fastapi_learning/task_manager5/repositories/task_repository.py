@@ -63,7 +63,7 @@ def create_task(title, status):
         
         cursor.execute(
             """
-            INSERT INTO task_historyy
+            INSERT INTO task_history
             (task_id, old_status, new_status)
             VALUES (?, ?, ?)
             """,

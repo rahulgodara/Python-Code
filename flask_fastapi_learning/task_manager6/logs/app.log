@@ -1,0 +1,304 @@
+2026-11-25 22:58:27,628 - INFO - app - Task Manager API started successfully
+2026-11-25 22:58:27,631 - INFO - app - Task Manager API started successfully
+2026-11-25 22:58:27,638 - INFO - app - Task Manager API started successfully
+2026-11-25 23:14:49,699 - INFO - app - Task Manager API started successfully
+2026-11-25 23:14:49,751 - INFO - app - Task Manager API started successfully
+2026-11-25 23:15:27,445 - INFO - app - Task Manager API started successfully
+2026-11-25 23:15:27,483 - INFO - app - Task Manager API started successfully
+2026-11-25 23:22:53,609 - INFO - app - Task Manager API started successfully
+2026-11-25 23:22:53,677 - INFO - app - Task Manager API started successfully
+2026-11-25 23:22:53,707 - INFO - app - Task Manager API started successfully
+2026-11-25 23:22:53,713 - INFO - app - Task Manager API started successfully
+2026-11-25 23:25:12,909 - INFO - app - Task Manager API started successfully
+2026-11-25 23:25:12,950 - INFO - app - Task Manager API started successfully
+2026-11-25 23:25:12,962 - INFO - app - Task Manager API started successfully
+2026-11-25 23:25:12,968 - INFO - app - Task Manager API started successfully
+2026-11-25 23:25:55,647 - INFO - app - Task Manager API started successfully
+2026-11-25 23:25:55,684 - INFO - app - Task Manager API started successfully
+2026-11-25 23:25:55,696 - INFO - app - Task Manager API started successfully
+2026-11-25 23:25:55,702 - INFO - app - Task Manager API started successfully
+2026-11-25 23:32:50,988 - INFO - app - Task Manager API started successfully
+2026-11-25 23:32:51,025 - INFO - app - Task Manager API started successfully
+2026-11-25 23:32:51,037 - INFO - app - Task Manager API started successfully
+2026-11-25 23:32:51,101 - INFO - app - Task Manager API started successfully
+2026-11-25 23:35:55,023 - INFO - app - Task Manager API started successfully
+2026-11-25 23:35:55,063 - INFO - app - Task Manager API started successfully
+2026-11-25 23:35:55,075 - INFO - app - Task Manager API started successfully
+2026-11-25 23:35:55,140 - INFO - app - Task Manager API started successfully
+2026-11-25 23:37:52,537 - INFO - app - Task Manager API started successfully
+2026-11-25 23:37:52,581 - INFO - app - Task Manager API started successfully
+2026-11-25 23:37:52,594 - INFO - app - Task Manager API started successfully
+2026-11-25 23:37:52,689 - INFO - app - Task Manager API started successfully
+2026-11-25 23:38:26,413 - INFO - app - Task Manager API started successfully
+2026-11-25 23:38:26,449 - INFO - app - Task Manager API started successfully
+2026-11-25 23:38:26,461 - INFO - app - Task Manager API started successfully
+2026-11-25 23:38:26,467 - INFO - app - Task Manager API started successfully
+2026-11-26 00:04:52,872 - INFO - app - Task Manager API started successfully
+2026-11-26 00:05:09,008 - INFO - app - Task Manager API started successfully
+2026-11-26 00:05:27,806 - INFO - app - Task Manager API started successfully
+2026-11-26 00:05:35,553 - INFO - app - Task Manager API started successfully
+2026-11-26 00:06:47,047 - INFO - app - Task Manager API started successfully
+2026-11-26 00:06:47,122 - INFO - app - Task Manager API started successfully
+2026-11-26 00:06:47,183 - INFO - app - Task Manager API started successfully
+2026-11-26 00:06:47,223 - INFO - app - Task Manager API started successfully
+2026-11-26 00:24:44,283 - INFO - app - Task Manager API started successfully
+2026-11-26 00:24:44,385 - INFO - app - Task Manager API started successfully
+2026-11-26 00:24:44,450 - INFO - app - Task Manager API started successfully
+2026-11-26 00:24:44,490 - INFO - app - Task Manager API started successfully
+2026-11-26 00:24:44,533 - INFO - app - Task Manager API started successfully
+2026-11-26 00:24:44,533 - INFO - services.task_service - Task creation requested
+2026-11-26 00:24:44,535 - ERROR - repositories.task_repository - Error while creating task
+Traceback (most recent call last):
+  File "F:\Python\Code\flask_fastapi_learning\task_manager6\repositories\task_repository.py", line 64, in create_task
+    cursor.execute(
+    ~~~~~~~~~~~~~~^
+        """
+        ^^^
+    ...<4 lines>...
+        (task_id, "None", status)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+sqlite3.OperationalError: no such table: task_historyy
+2026-11-26 00:25:06,383 - INFO - app - Task Manager API started successfully
+2026-11-26 00:25:06,452 - INFO - app - Task Manager API started successfully
+2026-11-26 00:25:06,501 - INFO - app - Task Manager API started successfully
+2026-11-26 00:25:06,540 - INFO - app - Task Manager API started successfully
+2026-11-26 00:25:06,582 - INFO - app - Task Manager API started successfully
+2026-11-26 00:25:06,583 - INFO - services.task_service - Task creation requested
+2026-11-26 00:25:06,585 - ERROR - repositories.task_repository - Error while creating task
+Traceback (most recent call last):
+  File "F:\Python\Code\flask_fastapi_learning\task_manager6\repositories\task_repository.py", line 64, in create_task
+    cursor.execute(
+    ~~~~~~~~~~~~~~^
+        """
+        ^^^
+    ...<4 lines>...
+        (task_id, "None", status)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+sqlite3.OperationalError: no such table: task_historyy
+2026-11-26 00:27:00,894 - INFO - app - Task Manager API started successfully
+2026-11-26 00:27:30,113 - INFO - app - Task Manager API started successfully
+2026-11-26 00:27:30,183 - INFO - app - Task Manager API started successfully
+2026-11-26 00:27:30,229 - INFO - app - Task Manager API started successfully
+2026-11-26 00:27:30,268 - INFO - app - Task Manager API started successfully
+2026-11-26 00:27:30,310 - INFO - app - Task Manager API started successfully
+2026-11-26 00:27:30,311 - INFO - services.task_service - Task creation requested
+2026-11-26 00:27:30,313 - ERROR - repositories.task_repository - Error while creating task
+Traceback (most recent call last):
+  File "F:\Python\Code\flask_fastapi_learning\task_manager6\repositories\task_repository.py", line 64, in create_task
+    cursor.execute(
+    ~~~~~~~~~~~~~~^
+        """
+        ^^^
+    ...<4 lines>...
+        (task_id, "None", status)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+sqlite3.OperationalError: no such table: task_historyy
+2026-11-26 00:28:27,519 - INFO - app - Task Manager API started successfully
+2026-11-26 00:28:27,591 - INFO - app - Task Manager API started successfully
+2026-11-26 00:28:27,637 - INFO - app - Task Manager API started successfully
+2026-11-26 00:28:27,677 - INFO - app - Task Manager API started successfully
+2026-11-26 00:28:27,722 - INFO - app - Task Manager API started successfully
+2026-11-26 00:28:27,723 - INFO - services.task_service - Task creation requested
+2026-11-26 00:28:27,735 - INFO - services.task_service - Task creation successful
+2026-11-26 10:17:50,637 - INFO - app - Task Manager API started successfully
+2026-11-26 10:17:50,745 - INFO - app - Task Manager API started successfully
+2026-11-26 10:17:50,821 - INFO - app - Task Manager API started successfully
+2026-11-26 10:17:50,862 - INFO - app - Task Manager API started successfully
+2026-11-26 10:17:50,901 - INFO - app - Task Manager API started successfully
+2026-11-26 10:17:50,902 - INFO - services.task_service - Task creation requested
+2026-11-26 10:17:50,914 - INFO - services.task_service - Task creation successful
+2026-11-26 11:54:38,254 - INFO - app - Task Manager API started successfully
+2026-11-26 11:54:38,358 - INFO - app - Task Manager API started successfully
+2026-11-26 11:54:38,422 - INFO - app - Task Manager API started successfully
+2026-11-26 11:54:38,461 - INFO - app - Task Manager API started successfully
+2026-11-26 11:54:38,498 - INFO - app - Task Manager API started successfully
+2026-11-26 11:54:38,499 - INFO - services.task_service - Task creation requested
+2026-11-26 11:54:38,510 - INFO - services.task_service - Task creation successful
+2026-11-26 11:54:38,546 - INFO - app - Task Manager API started successfully
+2026-11-26 11:55:03,937 - INFO - app - Task Manager API started successfully
+2026-11-26 11:55:04,015 - INFO - app - Task Manager API started successfully
+2026-11-26 11:55:04,060 - INFO - app - Task Manager API started successfully
+2026-11-26 11:55:04,099 - INFO - app - Task Manager API started successfully
+2026-11-26 11:55:04,140 - INFO - app - Task Manager API started successfully
+2026-11-26 11:55:04,141 - INFO - services.task_service - Task creation requested
+2026-11-26 11:55:04,154 - INFO - services.task_service - Task creation successful
+2026-11-26 11:55:04,194 - INFO - app - Task Manager API started successfully
+2026-11-26 11:58:22,712 - INFO - app - Task Manager API started successfully
+2026-11-26 11:58:22,797 - INFO - app - Task Manager API started successfully
+2026-11-26 11:58:22,841 - INFO - app - Task Manager API started successfully
+2026-11-26 11:58:22,883 - INFO - app - Task Manager API started successfully
+2026-11-26 11:58:22,924 - INFO - app - Task Manager API started successfully
+2026-11-26 11:58:22,925 - INFO - services.task_service - Task creation requested
+2026-11-26 11:58:22,936 - INFO - services.task_service - Task creation successful
+2026-11-26 11:58:22,974 - INFO - app - Task Manager API started successfully
+2026-11-26 12:00:35,057 - INFO - app - Task Manager API started successfully
+2026-11-26 12:00:35,145 - INFO - app - Task Manager API started successfully
+2026-11-26 12:00:35,198 - INFO - app - Task Manager API started successfully
+2026-11-26 12:00:35,238 - INFO - app - Task Manager API started successfully
+2026-11-26 12:00:35,277 - INFO - app - Task Manager API started successfully
+2026-11-26 12:00:35,278 - INFO - services.task_service - Task creation requested
+2026-11-26 12:00:35,291 - INFO - services.task_service - Task creation successful
+2026-11-26 12:00:35,329 - INFO - app - Task Manager API started successfully
+2026-11-26 12:00:35,370 - INFO - app - Task Manager API started successfully
+2026-11-26 12:03:19,106 - INFO - app - Task Manager API started successfully
+2026-11-26 12:03:19,188 - INFO - app - Task Manager API started successfully
+2026-11-26 12:03:19,238 - INFO - app - Task Manager API started successfully
+2026-11-26 12:03:19,286 - INFO - app - Task Manager API started successfully
+2026-11-26 12:03:19,324 - INFO - app - Task Manager API started successfully
+2026-11-26 12:03:19,325 - INFO - services.task_service - Task creation requested
+2026-11-26 12:03:19,338 - INFO - services.task_service - Task creation successful
+2026-11-26 12:03:19,387 - INFO - app - Task Manager API started successfully
+2026-11-26 12:03:19,427 - INFO - app - Task Manager API started successfully
+2026-11-26 12:03:19,465 - INFO - app - Task Manager API started successfully
+2026-11-26 12:04:01,381 - INFO - app - Task Manager API started successfully
+2026-11-26 12:04:01,468 - INFO - app - Task Manager API started successfully
+2026-11-26 12:04:01,520 - INFO - app - Task Manager API started successfully
+2026-11-26 12:04:01,565 - INFO - app - Task Manager API started successfully
+2026-11-26 12:04:01,670 - INFO - app - Task Manager API started successfully
+2026-11-26 12:04:01,671 - INFO - services.task_service - Task creation requested
+2026-11-26 12:04:01,686 - INFO - services.task_service - Task creation successful
+2026-11-26 12:04:01,730 - INFO - app - Task Manager API started successfully
+2026-11-26 12:04:01,770 - INFO - app - Task Manager API started successfully
+2026-11-26 12:04:01,809 - INFO - app - Task Manager API started successfully
+2026-11-26 12:07:28,597 - INFO - app - Task Manager API started successfully
+2026-11-26 12:07:28,682 - INFO - app - Task Manager API started successfully
+2026-11-26 12:07:28,728 - INFO - app - Task Manager API started successfully
+2026-11-26 12:07:28,766 - INFO - app - Task Manager API started successfully
+2026-11-26 12:07:28,807 - INFO - app - Task Manager API started successfully
+2026-11-26 12:07:28,808 - INFO - services.task_service - Task creation requested
+2026-11-26 12:07:28,821 - INFO - services.task_service - Task creation successful
+2026-11-26 12:07:28,861 - INFO - app - Task Manager API started successfully
+2026-11-26 12:07:28,899 - INFO - app - Task Manager API started successfully
+2026-11-26 12:07:28,940 - INFO - app - Task Manager API started successfully
+2026-11-26 12:07:28,982 - INFO - app - Task Manager API started successfully
+2026-11-26 12:07:37,021 - INFO - app - Task Manager API started successfully
+2026-11-26 12:07:37,100 - INFO - app - Task Manager API started successfully
+2026-11-26 12:07:37,146 - INFO - app - Task Manager API started successfully
+2026-11-26 12:07:37,187 - INFO - app - Task Manager API started successfully
+2026-11-26 12:07:37,231 - INFO - app - Task Manager API started successfully
+2026-11-26 12:07:37,232 - INFO - services.task_service - Task creation requested
+2026-11-26 12:07:37,245 - INFO - services.task_service - Task creation successful
+2026-11-26 12:07:37,285 - INFO - app - Task Manager API started successfully
+2026-11-26 12:07:37,325 - INFO - app - Task Manager API started successfully
+2026-11-26 12:07:37,362 - INFO - app - Task Manager API started successfully
+2026-11-26 12:07:37,401 - INFO - app - Task Manager API started successfully
+2026-11-26 12:10:33,091 - INFO - app - Task Manager API started successfully
+2026-11-26 12:10:33,176 - INFO - app - Task Manager API started successfully
+2026-11-26 12:10:33,222 - INFO - app - Task Manager API started successfully
+2026-11-26 12:10:33,266 - INFO - app - Task Manager API started successfully
+2026-11-26 12:10:33,307 - INFO - app - Task Manager API started successfully
+2026-11-26 12:10:33,308 - INFO - services.task_service - Task creation requested
+2026-11-26 12:10:33,320 - INFO - services.task_service - Task creation successful
+2026-11-26 12:10:33,361 - INFO - app - Task Manager API started successfully
+2026-11-26 12:10:33,401 - INFO - app - Task Manager API started successfully
+2026-11-26 12:10:33,439 - INFO - app - Task Manager API started successfully
+2026-11-26 12:10:33,481 - INFO - app - Task Manager API started successfully
+2026-11-26 12:10:33,520 - INFO - app - Task Manager API started successfully
+2026-11-26 12:10:55,450 - INFO - app - Task Manager API started successfully
+2026-11-26 12:10:55,538 - INFO - app - Task Manager API started successfully
+2026-11-26 12:10:55,587 - INFO - app - Task Manager API started successfully
+2026-11-26 12:10:55,629 - INFO - app - Task Manager API started successfully
+2026-11-26 12:10:55,675 - INFO - app - Task Manager API started successfully
+2026-11-26 12:10:55,676 - INFO - services.task_service - Task creation requested
+2026-11-26 12:10:55,690 - INFO - services.task_service - Task creation successful
+2026-11-26 12:10:55,727 - INFO - app - Task Manager API started successfully
+2026-11-26 12:10:55,771 - INFO - app - Task Manager API started successfully
+2026-11-26 12:10:55,809 - INFO - app - Task Manager API started successfully
+2026-11-26 12:10:55,846 - INFO - app - Task Manager API started successfully
+2026-11-26 12:10:55,890 - INFO - app - Task Manager API started successfully
+2026-11-26 12:11:15,251 - INFO - app - Task Manager API started successfully
+2026-11-26 12:11:15,332 - INFO - app - Task Manager API started successfully
+2026-11-26 12:11:15,376 - INFO - app - Task Manager API started successfully
+2026-11-26 12:11:15,417 - INFO - app - Task Manager API started successfully
+2026-11-26 12:11:15,462 - INFO - app - Task Manager API started successfully
+2026-11-26 12:11:15,463 - INFO - services.task_service - Task creation requested
+2026-11-26 12:11:15,477 - INFO - services.task_service - Task creation successful
+2026-11-26 12:11:15,513 - INFO - app - Task Manager API started successfully
+2026-11-26 12:11:15,552 - INFO - app - Task Manager API started successfully
+2026-11-26 12:11:15,588 - INFO - app - Task Manager API started successfully
+2026-11-26 12:11:15,625 - INFO - app - Task Manager API started successfully
+2026-11-26 12:11:15,664 - INFO - app - Task Manager API started successfully
+2026-11-26 12:15:03,883 - INFO - app - Task Manager API started successfully
+2026-11-26 12:15:03,968 - INFO - app - Task Manager API started successfully
+2026-11-26 12:15:04,014 - INFO - app - Task Manager API started successfully
+2026-11-26 12:15:04,055 - INFO - app - Task Manager API started successfully
+2026-11-26 12:15:04,095 - INFO - app - Task Manager API started successfully
+2026-11-26 12:15:04,096 - INFO - services.task_service - Task creation requested
+2026-11-26 12:15:04,111 - INFO - services.task_service - Task creation successful
+2026-11-26 12:15:04,158 - INFO - app - Task Manager API started successfully
+2026-11-26 12:15:04,197 - INFO - app - Task Manager API started successfully
+2026-11-26 12:15:04,242 - INFO - app - Task Manager API started successfully
+2026-11-26 12:15:04,279 - INFO - app - Task Manager API started successfully
+2026-11-26 12:15:04,318 - INFO - app - Task Manager API started successfully
+2026-11-26 12:15:04,366 - INFO - app - Task Manager API started successfully
+2026-11-26 12:16:42,894 - INFO - app - Task Manager API started successfully
+2026-11-26 12:16:42,977 - INFO - app - Task Manager API started successfully
+2026-11-26 12:16:43,027 - INFO - app - Task Manager API started successfully
+2026-11-26 12:16:43,069 - INFO - app - Task Manager API started successfully
+2026-11-26 12:16:43,109 - INFO - app - Task Manager API started successfully
+2026-11-26 12:16:43,110 - INFO - services.task_service - Task creation requested
+2026-11-26 12:16:43,128 - INFO - services.task_service - Task creation successful
+2026-11-26 12:16:43,169 - INFO - app - Task Manager API started successfully
+2026-11-26 12:16:43,208 - INFO - app - Task Manager API started successfully
+2026-11-26 12:16:43,253 - INFO - app - Task Manager API started successfully
+2026-11-26 12:16:43,290 - INFO - app - Task Manager API started successfully
+2026-11-26 12:16:43,328 - INFO - app - Task Manager API started successfully
+2026-11-26 12:16:43,382 - INFO - app - Task Manager API started successfully
+2026-11-26 12:16:43,420 - INFO - app - Task Manager API started successfully
+2026-11-26 12:16:43,461 - INFO - app - Task Manager API started successfully
+2026-11-26 12:21:37,782 - INFO - app - Task Manager API started successfully
+2026-11-26 12:21:37,867 - INFO - app - Task Manager API started successfully
+2026-11-26 12:21:37,916 - INFO - app - Task Manager API started successfully
+2026-11-26 12:21:37,957 - INFO - app - Task Manager API started successfully
+2026-11-26 12:21:38,003 - INFO - app - Task Manager API started successfully
+2026-11-26 12:21:38,004 - INFO - services.task_service - Task creation requested
+2026-11-26 12:21:38,017 - INFO - services.task_service - Task creation successful
+2026-11-26 12:21:38,056 - INFO - app - Task Manager API started successfully
+2026-11-26 12:21:38,096 - INFO - app - Task Manager API started successfully
+2026-11-26 12:21:38,139 - INFO - app - Task Manager API started successfully
+2026-11-26 12:21:38,177 - INFO - app - Task Manager API started successfully
+2026-11-26 12:21:38,216 - INFO - app - Task Manager API started successfully
+2026-11-26 12:21:38,255 - INFO - app - Task Manager API started successfully
+2026-11-26 12:21:38,295 - INFO - app - Task Manager API started successfully
+2026-11-26 12:21:38,334 - INFO - app - Task Manager API started successfully
+2026-11-26 12:21:38,376 - INFO - app - Task Manager API started successfully
+2026-11-26 12:26:34,698 - INFO - app - Task Manager API started successfully
+2026-11-26 12:26:34,930 - INFO - app - Task Manager API started successfully
+2026-11-26 12:26:34,975 - INFO - app - Task Manager API started successfully
+2026-11-26 12:26:35,019 - INFO - app - Task Manager API started successfully
+2026-11-26 12:26:35,063 - INFO - app - Task Manager API started successfully
+2026-11-26 12:26:35,064 - INFO - services.task_service - Task creation requested
+2026-11-26 12:26:35,080 - INFO - services.task_service - Task creation successful
+2026-11-26 12:26:35,119 - INFO - app - Task Manager API started successfully
+2026-11-26 12:26:35,158 - INFO - app - Task Manager API started successfully
+2026-11-26 12:26:35,196 - INFO - app - Task Manager API started successfully
+2026-11-26 12:26:35,234 - INFO - app - Task Manager API started successfully
+2026-11-26 12:26:35,270 - INFO - app - Task Manager API started successfully
+2026-11-26 12:26:35,308 - INFO - app - Task Manager API started successfully
+2026-11-26 12:26:35,347 - INFO - app - Task Manager API started successfully
+2026-11-26 12:26:35,394 - INFO - app - Task Manager API started successfully
+2026-11-26 12:26:35,470 - INFO - app - Task Manager API started successfully
+2026-11-26 12:26:35,509 - INFO - app - Task Manager API started successfully
+2026-11-26 12:27:13,541 - INFO - app - Task Manager API started successfully
+2026-11-26 12:27:13,673 - INFO - app - Task Manager API started successfully
+2026-11-26 12:27:13,720 - INFO - app - Task Manager API started successfully
+2026-11-26 12:27:13,760 - INFO - app - Task Manager API started successfully
+2026-11-26 12:27:13,802 - INFO - app - Task Manager API started successfully
+2026-11-26 12:27:13,803 - INFO - services.task_service - Task creation requested
+2026-11-26 12:27:13,816 - INFO - services.task_service - Task creation successful
+2026-11-26 12:27:13,854 - INFO - app - Task Manager API started successfully
+2026-11-26 12:27:13,901 - INFO - app - Task Manager API started successfully
+2026-11-26 12:27:13,941 - INFO - app - Task Manager API started successfully
+2026-11-26 12:27:13,983 - INFO - app - Task Manager API started successfully
+2026-11-26 12:27:14,021 - INFO - app - Task Manager API started successfully
+2026-11-26 12:27:14,059 - INFO - app - Task Manager API started successfully
+2026-11-26 12:27:14,101 - INFO - app - Task Manager API started successfully
+2026-11-26 12:27:14,140 - INFO - app - Task Manager API started successfully
+2026-11-26 12:27:14,179 - INFO - app - Task Manager API started successfully
+2026-11-26 12:27:14,220 - INFO - app - Task Manager API started successfully
